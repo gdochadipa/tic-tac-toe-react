@@ -79,7 +79,7 @@ function App() {
         setWinner(win)
       }
 
-      console.log(nextSquares)
+      // console.log(nextSquares)
 
        return nextSquares
   }
