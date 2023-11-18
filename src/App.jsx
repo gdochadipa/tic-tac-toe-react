@@ -86,7 +86,6 @@ function App() {
 
   function handlePlay(nextSquares) {
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares]
-
     setHistory(nextHistory)
     setCurrentMove(nextHistory.length - 1)
   }
@@ -134,7 +133,7 @@ function App() {
           </select>
         </div>
         <div className='flex flex-col items-center gap-8'>
-          <Board isLastGame={isLastGame} squares={currentSquares} onPlay={handlePlay} onCheckWin={handleCheckWin} winner={winner} gameover={gameOver} />
+          <Board isLastGame={currentMove >= 5 } squares={currentSquares} onPlay={handlePlay} onCheckWin={handleCheckWin} winner={winner} gameover={gameOver} />
         </div>
         <div className='mt-8'>
           <button onClick={resetGame} className='text-lg'>Reset Game</button>
