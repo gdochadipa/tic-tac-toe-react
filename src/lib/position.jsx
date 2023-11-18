@@ -36,10 +36,8 @@ export const lvlThree = [
     ...diagonal
 ]
 
-export const level = [
-    lvlOnePos,
-    lvlTwoPos,
-    lvlThree
-
-    
-]
+export const level = {
+   'lvl1' : lvlOnePos,
+   'lvl2' : lvlTwoPos,
+   'lvl3' :lvlThree
+}

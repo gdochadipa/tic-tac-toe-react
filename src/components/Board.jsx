@@ -9,7 +9,7 @@ var aiPlayer = "X";
 
 
 // eslint-disable-next-line no-unused-vars
-export function Board({xIsNext, squares, onPlay, onCheckWin, winner, gameover}){
+export function Board({isLastGame, squares, onPlay, onCheckWin, winner, gameover}){
  // eslint-disable-next-line no-unused-vars
     const board = Array(9).fill("")
 
@@ -38,6 +38,12 @@ export function Board({xIsNext, squares, onPlay, onCheckWin, winner, gameover}){
           {
             winner === huPlayer ?
             <h1 className="mb-8 text-center text-2xl font-bold">O wins!</h1>
+            :
+            ''
+          }
+          {
+            winner === huPlayer ?
+            <h1 className="mb-8 text-center text-2xl font-bold">Tie Game !</h1>
             :
             ''
           }

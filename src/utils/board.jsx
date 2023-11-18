@@ -1,12 +1,11 @@
 import { level } from "../lib/position";
-
 // human
 var huPlayer = "O";
 // ai
 var aiPlayer = "X";
 
-export const winningAi = (board, player) => {
-    const lines = level[2];
+export const winningAi = (board, player, lvl) => {
+    const lines = level[lvl];
 
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
@@ -25,15 +24,14 @@ function emptyBoard(board){
   return board.filter(s => s != 'O' && s != 'X')
 }
 
-export function minimax(newBoard, player){
+export function minimax(newBoard, player, lvl){
      //cari spot yg kosong
    var availSpot = emptyBoard(newBoard)
 
-   
-   if (winningAi(newBoard, huPlayer)){
+   if (winningAi(newBoard, huPlayer, lvl)){
     return {score : -10}
 
-   }else if (winningAi(newBoard, aiPlayer)){
+   }else if (winningAi(newBoard, aiPlayer, lvl)){
     return {score : 10}
 
    }else if (availSpot.length  === 0){
@@ -55,10 +53,10 @@ export function minimax(newBoard, player){
     var result = null;
 
     if(player == aiPlayer){
-      result = minimax(newBoard, huPlayer)
+      result = minimax(newBoard, huPlayer, lvl)
       move.score = result.score
     }else{
-      result = minimax(newBoard, aiPlayer)
+      result = minimax(newBoard, aiPlayer, lvl)
       move.score = result.score
     }
 

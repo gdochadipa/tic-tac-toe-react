@@ -1,12 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Roboto:ital,wght@0,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Outfit:wght@300&family=Roboto:ital,wght@0,300;1,400&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-body {
-  font-family: sans-serif;
-  /* margin: 20px; */
-  padding: 0;
-  /* background-color: rgb(131, 192, 238) */
+@font-face {
+  font-family: 'Nunito';
+  src: url('https: //fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Roboto:ital,wght@0,300;1,400&display=swap');
 }
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('https: //fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Outfit:wght@300&family=Roboto:ital,wght@0,300;1,400&display=swap');
+}
+
+
+html,
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+option:hover{
+  box-shadow: 0;
+  background-color: black;
+}
+
 
